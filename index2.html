@@ -1,0 +1,42 @@
+<body >
+    <input type="text"></input>
+    <button onclick="addTodo()">Add todo!</button>
+    <button onclick="delTodo()">Delete todo!</button>
+    <div id="todos"></div>
+    <script>
+      let todos = [];
+      function addTodo() {
+        todos.push({
+          title: document.querySelector("input").value
+        })
+        render();
+      }
+  
+      function delTodo() {
+        todos.pop()
+        render();
+      }
+      function delSpec(){
+        div.parentNode.removeChild(div);
+      }
+      function render() {
+        document.querySelector("#todos").innerHTML="";
+        for(let i=0; i<todos.length; i++){
+            
+            
+            const todo = todos[i];
+            const div = document.createElement("div");
+            const h1 = document.createElement("h1");
+            const btn = document.createElement("button");
+            
+            h1.innerHTML = todo.title;
+            btn.innerHTML =  <button onclick="delSpec()">Delete!</button>
+            div.appendChild(h1);
+            div.appendChild(btn);
+            document.querySelector("#todos").appendChild(div);
+            console.log(i);
+        }
+        
+      }
+    </script>
+  </body>

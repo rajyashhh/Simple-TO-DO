@@ -12,7 +12,7 @@ function Adder(){
     buttonEl.innerHTML =  "<button onclick = 'deleteTodo(" + ctr + ")'>Delete TO-DO</button> </div>"
     //newTask.innerHTML = "<div> <h3>" + input.value + "</h3>" + 
     //"<button onclick = 'deleteTodo(" + ctr + ")'>Delete TO-DO</button> </div>";
-    newTask.appendChild(spanEl);
+    newTask.appendChild(spanEl); 
     newTask.appendChild(buttonEl);
     newTask.setAttribute("id", "task-" + ctr);
     // newTask.setAttribute("class", "task");
